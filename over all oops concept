@@ -1,0 +1,65 @@
+what is class:
+/////////////////////////////////////////////////////////////////////////
+Classes are one of the features introduced in the ES6 version of JavaScript.
+
+A class is a blueprint for the object. You can create an object from the class.
+
+You can think of the class as a sketch (prototype) of a house. It contains all the details about the floors, doors, windows, etc. Based on these descriptions, you build the house. House is the object.
+////////////////////////////////////////////////////////////////////////////////
+what is encapsulation
+//////////////////////////////
+Encapsulation is defined as the wrapping up of data under a single unit. It is the mechanism that binds together code and the data it manipulates. Another way to think about encapsulation is, that it is a protective shield that prevents the data from being accessed by the code outside this shield. 
+
+Advantages of Encapsulation:  
+Data Hiding:
+Increased Flexibility:
+Reusability
+Testing code is easy: Encapsulated code is easy to test for unit testing.
+Encapsulation
+///////////////////////////////////////////////////////////////////////////
+what is constructor:
+//////////////////////////////////////////////////////////////////////////////////
+A constructor is a special function that creates and initializes an object instance of a class. In JavaScript, a constructor gets called when an object is created using the new keyword.
+
+The purpose of a constructor is to create a new object and set values for any existing object properties.
+//////////////////////////////////////////////////////////////
+Constructor vs Object Literal
+////////////////////////////////////////
+An object literal is typically used to create a single object whereas a constructor is useful for creating multiple objects:
+
+//Object literal
+let user = {
+    name: 'Bob'
+}
+//Constructor
+function User() {
+    this.name = 'Bob';
+}
+
+var user1 = new User();
+var user2 = new User();
+Each object created using a constructor is unique. Properties can be added or removed from an object without affecting another one created using the same constructor. However, if an object is built using an object literal, any changes made to the variable that is assigned the object value will change the original object.
+
+ 
+
+Object Prototype
+Properties and methods can be added to a constructor using a prototype:
+
+//Constructor
+function User() {
+    this.name = 'Bob';
+}
+
+let user1 = new User();
+let user2 = new User();
+
+//Adding property to constructor using prototype
+User.prototype.age = 25;
+
+console.log(user1.age); // 25
+console.log(user2.age); // 25
+In the above example, two User objects are created using the constructor. A new property age is later added to the constructor using a prototype, which is shared across all instances of the User object.
+////////////////////////////////////////
+what is abstraction
+////////////////////////////////
+Abstraction is the concept of object-oriented programming that "shows" only essential attributes and "hides" unnecessary information. The main purpose of abstraction is hiding the unnecessary details from the users.
